@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+    <h1>Calculadora Financeira</h1>
+
+    <div>
+        <label for="numero_freezers">Digite quantos Freezers você possui:</label>
+        <input type="text" id="numero_freezers">
+    </div>
+
+    <div>
+        <label for="numero_iorgute_freezer">Digite quantos iogurtes por Freezer:</label>
+        <input type="text" id="numero_iorgute_freezer">
+    </div>
+
+    <div>
+        <label for="investimento_iorgute">Digite seu investimento para abastecer um Freezer de iogurte:</label>
+        <input type="text" id="investimento_iorgute">
+    </div>
+
+    <div>
+        <label for="lucro_iorgute">Digite seu lucro por iogurte:</label>
+        <input type="text" id="lucro_iorgute">
+    </div>
+
+    <div>
+        <label for="perda_iorgute">Digite quantos iogurtes você perde no total por mês:</label>
+        <input type="text" id="perda_iorgute">
+    </div>
+
+    <button onclick="calcularLucro()">Calcular</button>
+
+    <script>
+        function calcularLucro() {
+            
+            const quantidaDeFreezers = Number(numero_freezers.value);
+            const iorgutesPorFreezer = Number(numero_iorgute_freezer.value);
+            const totalIorgutes = quantidaDeFreezers * iorgutesPorFreezer;
+            const investimentoPorFreezer = Number(investimento_iorgute.value);
+            
+            const investimentoTotal = quantidaDeFreezers * investimentoPorFreezer;
+
+            const investimentoPorIorgute = investimentoPorFreezer/iorgutesPorFreezer;
+
+            const lucroPorIorgute = Number(lucro_iorgute.value);
+            const faturamentoTotalIorgute = lucroPorIorgute * totalIorgutes;
+            
+            const perdaTotalIorgutesMes = Number(perda_iorgute.value);
+            
+            const prejuizoTotal = investimentoPorIorgute * perdaTotalIorgutesMes;
+
+            const lucroTotal = faturamentoTotalIorgute - investimentoTotal;
+            
+            
+            console.log("investimento:" +  investimentoTotal);
+            console.log("quantidade iorgutes: " + totalIorgutes);
+            console.log("investimento por iorgute: " + investimentoPorIorgute)
+            console.log("prejuizo: " + prejuizoTotal);
+            console.log("faturamento: " + faturamentoTotalIorgute  )
+            console.log("lucro total: " + lucroTotal  )
+
+            // Com os sensores
+
+            const precoSensor = 100;
+            const investimentoEmSensor = quantidaDeFreezers * precoSensor;
+            const novaPerdaDeIorgutesComSensor = perdaTotalIorgutesMes * 0.7
+            const novoFaturamento = (totalIorgutes - novaPerdaDeIorgutesComSensor) * 
+
+    
+            console.log("investimento em sensor:" + investimentoEmSensor);
+            console.log("novo prejuizo: " + novaPerdaDeIorgutesComSensor);
+
+        }
+    </script>
+</body>
+</html>
