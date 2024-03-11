@@ -21,10 +21,10 @@ body {
     height: 39px;
     justify-content: center;
     border: 2px black solid;
-    border-radius: 20px;
+    border-radius: 10px;
 
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 2px;
+    margin-bottom: 10px;
     align-items: center;
     align-content: center;
 
@@ -37,7 +37,7 @@ body {
 
     display: flex;
     width: 100vw;
-    height: 70vh;
+    height:72vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -47,13 +47,13 @@ body {
 
 .box {
 
-    height: 470px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     width: 400px;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 0px;
     margin: 10px;
     background-color: rgb(56, 172, 244);
     border-width: 5px;
@@ -66,11 +66,12 @@ body {
 
 
 #btRes {
-    margin: 40px;
+    margin: 10px;
     cursor: pointer;
     color: rgb(255, 255, 255);
     background-color: rgb(255, 12, 12);
     font-size: larger;
+    border-radius: 10px;
 }
 
 #divInput {
@@ -80,9 +81,9 @@ body {
     width: auto;
     font-size: larger;
     font-weight: 700;
-    height: 400px;
+    height: 300px;
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     margin-right: 10%;
     margin-left: 10%;
 }
@@ -108,7 +109,7 @@ body {
 
 #direitos {
     position: fixed;
-    top: 85%;
+    top: 80%;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -130,7 +131,8 @@ body {
 
 
 .box2 {
-    height: 470px;
+    position: static;
+    height: 400px;
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -152,7 +154,7 @@ body {
     color: #faf8b3;
     border-radius: 10px;
     border-bottom: white;
-    margin-top: 2px;
+    margin-top: 20px;
     margin-left: 5px;
     height: 50px;
     justify-content: center;
@@ -183,8 +185,8 @@ body {
     font-weight: bold;
 
     margin: 5px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 4px;
     margin-right: 10%;
     margin-left: 10%;
 }
